@@ -16,27 +16,22 @@
     </div>        
             <div class="flex-box">
                 <% if(currUser&& currUser._id.equals(data.owner._id)) {%>
-                <form action="http://localhost:3000/listings/<%= data.id %>?_method=Delete" method="POST">
+                <form action="/listings/<%= data.id %>?_method=Delete" method="POST">
                     <button class="btn btn-dark btn-lg show-btn">Delete Listing</button>
                 </form>
-                <a class="btn btn-dark add-btn btn-lg show-a" href="http://localhost:3000/listings/<%= data.id %>/edit">Edit listing</a>
+                <a class="btn btn-dark add-btn btn-lg show-a" href="/listings/<%= data.id %>/edit">Edit listing</a>
                 <% } %>
-                <a class="btn btn-dark add-btn btn-lg show-a"  href="http://localhost:3000/listings">Back</a>
+                <a class="btn btn-dark add-btn btn-lg show-a"  href="/listings">Back</a>
             </div>   
     <hr>
     <h4>Leave a review</h4>
-    <form action="http://localhost:3000/listings/<%= data.id %>/reviews" class="mb-3 mt-3 needs-validation" method="post" novalidate>
+    <form action="/listings/<%= data.id %>/reviews" class="mb-3 mt-3 needs-validation" method="post" novalidate>
         <div class="mb-3 ">
             <label for="comment"  class="form-label">Comment</label>
             <textarea name="comment" id="comment"class="form-control" placeholder="Please Enter A Review Here..." required></textarea>
             <div class="valid-feedback">Nicely Done!!</div>
             <div class="invalid-feedback">Please Enter A Comment!!</div>
        </div>
-       <!-- <div class="mb-3 col-2">
-        <label for="rating"  class="form-label">Rating</label>
-        <input type="range" id="rating" name="rating" min="0" max="5" class="form-range" required>
-        <div class="invalid-feedback">Please Set a Rating!!</div>
-       </div> -->
        <fieldset class="starability-slot">
         <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="1" checked aria-label="No rating." />
         <input type="radio" id="first-rate1" name="rating" value="1" />
@@ -62,7 +57,7 @@
                     <h6 class="card-subtitle mb-2 text-body-secondary"><p class="starability-result" data-rating=<%= review.rating %>></p></h6>
                     <p class="card-text"><%= review.comment %></p>
                     <% if(review.author._id.equals(currUser._id)) {%>
-                    <form action="http://localhost:3000/listings/<%= data.id %>/reviews/<%= review.id %>?_method=Delete" class="mt -3" method="post">
+                    <form action="/listings/<%= data.id %>/reviews/<%= review.id %>?_method=Delete" class="mt -3" method="post">
                         <button class="btn btn-dark">Delete</button>
                     </form>
                     <% } %>

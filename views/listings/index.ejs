@@ -5,15 +5,15 @@
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav filters-a">
-                  <a class="nav-link" href="http://localhost:3000/listings/mansions/CV"><span class="material-symbols-outlined">home</span><br>Mansions</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/beach/CV"><span class="material-symbols-outlined">deck</span><br> Beach</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/boats/CV"><span class="material-symbols-outlined">sailing</span><br>Boats</a>
-                  <a class="nav-link "href="http://localhost:3000/listings/mountains/CV"><span class="material-symbols-outlined">landscape_2</span><br>Mountains</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/forest/CV"><span class="material-symbols-outlined">forest</span><br>Forest</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/winters/CV"><span class="material-symbols-outlined">ac_unit</span><br>Winters</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/rainy/CV"><span class="material-symbols-outlined">rainy</span><br>Rainy</a>
-                  <a class="nav-link "href="http://localhost:3000/listings/apartment/CV"><span class="material-symbols-outlined">apartment</span><br>Apartment</a>
-                  <a class="nav-link" href="http://localhost:3000/listings/restaurant/CV"><span class="material-symbols-outlined"> restaurant</span><br> Restaurant</a>
+                  <a class="nav-link" href="/listings/mansions/CV"><span class="material-symbols-outlined">home</span><br>Mansions</a>
+                  <a class="nav-link" href="/listings/beach/CV"><span class="material-symbols-outlined">deck</span><br> Beach</a>
+                  <a class="nav-link" href="/listings/boats/CV"><span class="material-symbols-outlined">sailing</span><br>Boats</a>
+                  <a class="nav-link "href="/listings/mountains/CV"><span class="material-symbols-outlined">landscape_2</span><br>Mountains</a>
+                  <a class="nav-link" href="/listings/forest/CV"><span class="material-symbols-outlined">forest</span><br>Forest</a>
+                  <a class="nav-link" href="/listings/winters/CV"><span class="material-symbols-outlined">ac_unit</span><br>Winters</a>
+                  <a class="nav-link" href="/listings/rainy/CV"><span class="material-symbols-outlined">rainy</span><br>Rainy</a>
+                  <a class="nav-link "href="/listings/apartment/CV"><span class="material-symbols-outlined">apartment</span><br>Apartment</a>
+                  <a class="nav-link" href="/listings/restaurant/CV"><span class="material-symbols-outlined"> restaurant</span><br> Restaurant</a>
                 </div>
               </div>
             </div>
@@ -27,7 +27,7 @@
     </div>
     <div class="box">
         <% for(user of data){ %>
-            <a href="http://localhost:3000/listings/<%= user.id %>">
+            <a href="/listings/<%= user.id %>">
                 <div class="card  ">
                     <img src="<%= user.image.path %>" class="card-img-top" alt="wait for sec">
                     <div class="card-img-overlay"></div>

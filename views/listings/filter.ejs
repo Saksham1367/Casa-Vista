@@ -3,7 +3,7 @@
     <h1 class="new-head m-3">Filter Applied : <%= filter %></h1>
     <div class="box">
         <% for(listing of listings){ %>
-            <a href="http://localhost:3000/listings/<%= listing.id %>">
+            <a href="/listings/<%= listing.id %>">
                 <div class="card  ">
                     <img src="<%= listing.image.path %>" class="card-img-top" alt="wait for sec">
                     <div class="card-img-overlay"></div>
@@ -18,5 +18,5 @@
             </a>
         <% } %>
     </div>
-    <a class="btn btn-dark btn-lg add-btn mt-5 " href="http://localhost:3000/listings">Back</a>
+    <a class="btn btn-dark btn-lg add-btn mt-5 " href="/listings">Back</a>
 </body>
