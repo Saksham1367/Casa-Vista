@@ -1,0 +1,23 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row offset-4 mt-5">
+    <div class="col-6  signup">
+        <h1 class="new-head mt-2" style="color: white;">Casa Vista</h1>
+        <form action="http://localhost:3000/login" method="post" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text", name="username" placeholder="enter Username" id="username" class="form-control" required>
+                <div class="valid-feedback">Nicely Done!!</div>
+                <div class="invalid-feedback">Please Enter A Valid Title!!</div>
+            </div> 
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password", name="password" placeholder="enter password " id="password" class="form-control" required>
+                <div class="valid-feedback">Nicely Done!!</div>
+                <div class="invalid-feedback">Please Enter A Valid Title!!</div>
+            </div> 
+            <button class="btn btn-lg  mt-3 offset-5 signup-btn">login</button>
+        </form>
+        <p class="redirect-link2">Create Account!!<a href="http://localhost:3000/signup">signup</a></p>
+    </div>
+</div>    

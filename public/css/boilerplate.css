@@ -1,0 +1,245 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-fluid{
+    flex: 1;
+}
+/* navbar custom styling */
+.navbar{
+    height: 5rem;
+    background-color: #fff;
+}
+/* navbar icon */
+.navicon{
+    color: #fe424d;
+    font-size: 2.5rem;
+}
+.nav-link{
+    color: #222222;
+}
+.anchor{
+    border: 1px solid black;
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+/* footer custom styling */
+.f-info{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+}
+.footer-icon{
+    opacity: 0.75;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+.footer-icon:hover{
+    opacity: 1;
+}
+.f-links,.f-info-socials{
+    width: 100%;
+}
+
+.f-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-links a:hover{
+    text-decoration: underline;
+}
+
+/* index route styling */
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.box a{
+    text-decoration: none;
+}
+.card{
+    width: 20rem;
+    border: none;
+    margin: 0.65rem;
+}
+.card img{
+    height: 12rem;
+    width: 20rem;
+    border-radius: 1rem ;
+    object-fit: cover;
+}
+.card-body{
+    padding: 0;
+}
+.card-text {
+    font-weight: 500;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: #fff;
+}
+/* new route */
+.new-head{
+    color: #fe424d;
+    text-align: center;
+}
+.add-btn{
+    color: #fff;
+    background-color: #fe424d;
+    border: none;
+}
+.add-btn:hover{
+    color: #fff;
+    background-color: #fe424d;
+    border: none;
+    box-shadow: 2px 2px 10px #222;
+}
+/* show route */
+.show-img{
+    margin-left: 25rem;
+    margin-bottom: 2rem;
+    height: 30vh;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.show-a{
+    margin-left: 2rem;
+}
+.card-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.show-card{
+    width: 100%;
+    margin-left: 11rem;
+}
+.show-text{
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 13rem;
+}
+/* reviews in show route */
+.review-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* for signup template */
+.signup{
+    background-color: #fe424d;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.signup-btn{
+    color: #fe424d;
+    background-color: #fff;
+    font-weight: 700;
+}
+.signup-btn:hover{
+    color: #fe424d;
+    background-color: #fff;
+    font-weight: 700
+}
+.valid-feedback{
+    color: #fff;
+}
+.invalid-feedback{
+    color: #fff;
+}
+.redirect-link{
+    font-size: smaller;
+    color: #fff;
+    margin: 1rem 0 0  6rem;
+}
+.redirect-link a{
+    margin-left: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.redirect-link a:hover{
+    text-decoration:underline;
+}
+.redirect-link2{
+    font-size: smaller;
+    color: #fff;
+    margin: 1rem 0 0  10rem;
+}
+.redirect-link2 a{
+    margin-left: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.redirect-link2 a:hover{
+    text-decoration:underline;
+}
+
+/* search bar */
+.search-bar{
+    margin-left: 20rem;
+}
+.search-btn{
+    color: #fff;
+    background-color: #fe424d;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+.search-btn:hover{
+    color: #fff;
+    background-color: #fe424d;
+}
+.sbtn-i{
+    display: inline;
+    margin-right: 0.2rem;
+}
+.search-inp{
+    border-radius: 2rem;
+    padding: 0 3rem 0 3rem;
+    text-align: center;
+    margin-right: 5rem;
+}
+/* filters */
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 2rem;
+    margin: 2rem 1rem 2rem 1rem;
+}
+.filters-nav{
+    border-radius: 2rem;
+    background-color:white;
+}
+.filters-a a{
+    margin-right: 1.5rem;
+    opacity: 0.85;
+}
+.filters-a a:hover{
+    opacity: 1;
+}
+.toggle{
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-left: 15rem;
+}
+.tax-info{
+    display: none;
+}
+
