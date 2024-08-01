@@ -1,6 +1,10 @@
 const Listing = require("../models/listing.js");
 const listingSchema =require("../serverschema/listingSchema.js");
 const ExpressError =require("../ultis/expresserror.js");
+// for geocoding
+const mbxGeoCoding = require("@mapbox/mapbox-sdk/services/geocoding");
+const mapToken = process.env.MAP_TOKEN;
+const geocodingClient = mbxGeoCoding({ accessToken: mapToken });
 
 // index route
 module.exports.index=(req,res,next)=>{
@@ -17,6 +21,12 @@ module.exports.index=(req,res,next)=>{
 
 //create route
 module.exports.create=async (req,res)=>{
+    // for geocoding
+    let coordinates= await geocodingClient.forwardGeocode({
+        query: req.body.location,
+        limit: 1
+      })
+     .send();        
     let data = req.body;
     let {path,filename} =req.file;
     // let {error} = listingSchema.validate(data);
@@ -26,6 +36,7 @@ module.exports.create=async (req,res)=>{
     let newListing = new Listing({...data})
     newListing.owner =req.user._id;
     newListing.image={path,filename};
+    newListing.geometry =coordinates.body.features[0].geometry;
     await newListing.save();
     req.flash("success","Your Listing Has Been Created On CasaVista!!");
     res.redirect("/listings");

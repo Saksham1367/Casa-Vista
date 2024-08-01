@@ -242,4 +242,8 @@ body{
 .tax-info{
     display: none;
 }
-
+/* for map */
+#map{
+    height: 450px;
+    width: 100vh;
+}

@@ -35,7 +35,18 @@ const listingSchema = new mongoose.Schema({
     },
     filter:{
         type:String
-    }
+    },
+    geometry:{
+        type: {
+          type: String, 
+          enum: ['Point'], 
+          required: true
+        },
+        coordinates: {
+          type: [Number],
+          required: true
+        }
+      }
     
 });
 // middleware to delete reviews with listings

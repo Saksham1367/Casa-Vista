@@ -47,6 +47,7 @@
       </fieldset>
       <button type="submit" class="btn btn-outline-danger">Submit</button>
     </form>
+    <% if(data.reviews.length>0){ %>
     <hr>
     <h3>All reviews</h3>
     <div class="review-box mb-3">
@@ -66,4 +67,17 @@
             </div>
         <% } %>
    </div>
+   <% } %>
+   <hr>
+   <!-- for displaying map -->
+    <div class="col-8 mb-3 offset-3"> 
+        <h3>Where You'll Be:</h3>
+    <div id="map"></div>
+    </div>
+    <script>
+        let mapToken = "<%=process.env.MAP_TOKEN%>";
+        let coordinates = <%-JSON.stringify(data.geometry.coordinates) %>;
+     </script>
+    <script src="/js/map.js"></script>
+
 </body>
