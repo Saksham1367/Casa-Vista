@@ -29,10 +29,10 @@ module.exports.create=async (req,res)=>{
      .send();        
     let data = req.body;
     let {path,filename} =req.file;
-    // let {error} = listingSchema.validate(data);
-    // if(error){
-    //     throw new ExpressError(400,error);
-    // }
+    let {error} = listingSchema.validate(data);
+    if(error){
+        throw new ExpressError(400,error);
+    }
     let newListing = new Listing({...data})
     newListing.owner =req.user._id;
     newListing.image={path,filename};

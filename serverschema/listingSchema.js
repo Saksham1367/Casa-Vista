@@ -7,6 +7,6 @@ const listingSchema =Joi.object({
     price:Joi.number().required().min(0),
     location:Joi.string().required(),
     country:Joi.string().required(),
-    filter:Joi.string().required()
+    filter:Joi.string().required(),
 }).required();
 module.exports=listingSchema;
